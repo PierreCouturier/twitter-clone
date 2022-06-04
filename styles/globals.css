@@ -1,0 +1,38 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--primary: #ffffff;
+		--secondary: #202020;
+	}
+
+	.dark {
+		--primary: #202020;
+		--secondary: #ffffff;
+	}
+}
+
+@layer components {
+	code {
+		@apply bg-zinc-50 dark:text-black rounded-[5px] p-3 text-base font-mono;
+	}
+}
